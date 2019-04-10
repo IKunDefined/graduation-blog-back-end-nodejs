@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const activityController = require('../controllers/activity')
+const messageController = require('../controllers/message')
 
-router.get('/list', activityController.activityList)
-router.post('/create', activityController.activityCreate)
-router.post('/delete', activityController.activityDelete)
+router.get('/list', messageController.messageList)
+router.post('/create', messageController.messageCreate)
+router.post('/delete', messageController.messageDelete)
 
 module.exports = router

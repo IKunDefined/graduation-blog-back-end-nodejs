@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const activitySchema = mongoose.Schema({
   content: String,
-  createBy: String
+  createAt: String
 })
 
 module.exports = mongoose.model('Activity', activitySchema)
