@@ -1,4 +1,4 @@
-const Message = require('../../models/Message')
+const Category = require('../../models/Category')
 
 module.exports = (req, res) => {
   let responseData = {
@@ -6,7 +6,7 @@ module.exports = (req, res) => {
     message: '删除成功'
   }
   const _id = req.body.id
-  Message.deleteOne({
+  Category.deleteOne({
     _id
   }).then(result => {
     if (result.deletedCount === 1) {

@@ -1,4 +1,4 @@
-const Post = require('../../models/Post')
+const Category = require('../../models/Category')
 
 module.exports = (req, res) => {
   let responseData = {
@@ -8,15 +8,15 @@ module.exports = (req, res) => {
     pageSize: 1,
     pageNo: 1
   }
-  Post.find().then(postlist => {
-    if (postlist) {
-      postlist.reverse()
-      responseData.result = postlist
+  Category.find().then(categorylist => {
+    if (categorylist.length !== 0) {
+      responseData.result = categorylist
       res.json(responseData)
     } else {
       responseData = {
         code: 1,
-        message: '获取失败'
+        message: '暂无数据',
+        result: []
       }
       res.json(responseData)
     }

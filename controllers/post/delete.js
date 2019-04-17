@@ -9,7 +9,7 @@ module.exports = (req, res) => {
   Post.deleteOne({
     _id
   }).then(result => {
-    if (result.deleteCount === 1) {
+    if (result.deletedCount === 1) {
       res.json(responseData)
     } else {
       responseData = {
