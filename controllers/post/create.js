@@ -6,6 +6,7 @@ module.exports = (req, res) => {
     message: '发布成功'
   }
   const { title, summary, content, createAt, tags, category } = req.body.post
+  console.log(category)
   let post = new Post({
     title,
     summary,

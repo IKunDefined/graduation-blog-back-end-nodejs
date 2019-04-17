@@ -7,5 +7,6 @@ router.get('/query', postController.postQuery)
 router.post('/create', postController.postCreate)
 router.post('/delete', postController.postDelete)
 router.post('/update', postController.postUpdate)
+router.post('/comment/leave', postController.postLeaveComment)
 
 module.exports = router

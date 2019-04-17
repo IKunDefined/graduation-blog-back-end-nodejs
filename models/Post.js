@@ -9,7 +9,9 @@ const postSchema = mongoose.Schema({
   category: {
     _id: String,
     name: String
-  }
+  },
+  comment: [],
+  like: []
 })
 
 module.exports = mongoose.model('Post', postSchema)

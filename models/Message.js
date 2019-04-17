@@ -4,11 +4,8 @@ const messageSchema = mongoose.Schema({
   content: String,
   createAt: String,
   username: String,
-  comment: {
-    _id: String,
-    content: String,
-    username: String
-  }
+  comment: [],
+  like: []
 })
 
 module.exports = mongoose.model('Message', messageSchema)
