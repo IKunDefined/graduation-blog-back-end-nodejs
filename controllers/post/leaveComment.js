@@ -15,6 +15,12 @@ module.exports = (req, res) => {
   }).then(result => {
     if (result.nModified === 1) {
       res.json(responseData)
+    } else {
+      responseData = {
+        code: 1,
+        message: '留言失败'
+      }
+      res.json(responseData)
     }
   })
 }
